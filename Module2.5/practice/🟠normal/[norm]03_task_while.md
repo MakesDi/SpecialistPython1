@@ -20,7 +20,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+level_num = int(input("Введите чиcло этажей: "))
+brick = 0
+summa = 0
+
+while brick <= level_num:
+    summa += brick*brick
+    brick += 1
+print("Сумма чисел на кирпичах: ", summa)  
 ```
 
 ---
