@@ -32,7 +32,12 @@ n = 5
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+total = int(input("Введите число ступенек: "))
+n = 0
+
+while n <= total:
+    print("*"*n)
+    n +=1
 ```
 
 ---
