@@ -6,5 +6,10 @@
 name = input("Имя: ")
 surname = input("Фамилия: ")
 
+cap_name = name.capitalize()
+cap_surname = surname.capitalize()
+
+name = cap_name
+surname = cap_surname
 
 print(name, surname)
