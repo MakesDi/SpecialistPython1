@@ -17,4 +17,22 @@
 # #
 
 
-# TODO: your code here
+n = int(input("Введите сторону квадрата: "))
+
+i = 0
+
+if n % 2 == 0:
+    while i < n // 2:
+        print (" "*i,"#"," "*(n-i*2-2),"#", sep='')
+        i += 1
+    while i > 0:
+        print (" "*(i-1),"#"," "*(n-(i-1)*2-2),"#", sep='')
+        i -= 1
+else:
+    while i < n // 2:
+        print (" "*i,"#"," "*(n-i*2-2),"#", sep='')
+        i += 1
+    print(" "*i, "#",sep='')
+    while i-1 >= 0:
+        print (" "*(i-1),"#"," "*(n-(i-1)*2-2),"#", sep='')
+        i -= 1
