@@ -21,5 +21,18 @@
 a = int(input("a: "))
 b = int(input("b: "))
 
-# TODO: you code here...
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+
+i = 0
+j = 0
+
+while i <= (b - a):
+    if (a + i) % 5 == 0:
+        print (a+i, end=" ")
+    i += 1
+while j <= (a - b):
+    if (b + j) % 5 == 0:
+        print (b+j, end=" ")
+    j += 1
 ```
