@@ -5,3 +5,17 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+
+numbers_list = input("Введите произвольные целые числа: ").split()
+new_list = []
+
+print("Исходный список: ", numbers_list)
+
+j = 0
+
+while j < len(numbers_list):
+    if (float(numbers_list[j]) > 0) and (round(float(numbers_list[j]) ** 0.5) ** 2 == float(numbers_list[j])):
+        new_list.append(hash(int(numbers_list[j]) ** 0.5))
+    j +=1
+
+print(new_list)
