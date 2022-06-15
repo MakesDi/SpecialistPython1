@@ -3,4 +3,14 @@
 
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
-# TODO: your code here
+names_list = input("Введите имена людей: ").split()
+
+i = 0
+max_len = 0
+
+while i < len(names_list):
+    if max_len < len(names_list[i]):
+        max_len = len(names_list[i])
+        max_name = names_list[i]
+    i += 1
+print (max_name)
