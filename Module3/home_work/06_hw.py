@@ -31,15 +31,43 @@ items = [
         "price": 1700
     },
 ]
-# Найдите:
-print("Товары на складе представлены брэндами: ")
+brands = []
+brands_counter = []
+brands_list= []
+max_price = 0
+posh_brands = []
+max_brands =[]
 
-# TODO: your code here
+i = 0
+j = 0
+k = 0
+l = 0
+m = 0
 
-print("На складе больше всего товаров брэнда(ов): ")
+while i < len(items):
+    brands.append(items[i]["brand"])
+    i +=1
+print ("Товары на складе представлены брэндами:",", ".join(set(brands)))
 
-# TODO: your code here
 
-print("На складе самый дорогой товар брэнда(ов): ")
+brands_list.extend(set(brands))
 
-# TODO: your code here
+while l < len(brands_list):
+    brands_counter.append(brands.count(brands_list[l]))
+    l +=1
+while m < len(brands_list):
+    if brands_counter[m] == max(brands_counter):
+        max_brands.append(brands_list[m])
+    m +=1
+print("На складе больше всего товаров брэнда(ов):",", ".join(set( max_brands)))
+
+
+while j < len(items):
+    if max_price < items[j]["price"]:
+        max_price = items[j]["price"]
+    j += 1
+while k < len(items):
+    if items[k]["price"] == max_price:
+        posh_brands.append(items[k]["brand"])
+    k +=1
+print ("На складе самый дорогой товар брэнда(ов):",", ".join(set(posh_brands)))
