@@ -16,7 +16,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите n: "))
+
+i = 0
+fib_consist = [0,1]
+
+while i < n:
+    fib_consist.append(fib_consist[i] + fib_consist[i+1])
+    i += 1
+print("n-е число последовательности Фибоначчи:", fib_consist[n-1])
 ```
 
 ### Данные для самопроверки
