@@ -16,7 +16,18 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите n: "))
+
+i = 2
+count = 0
+
+while i < n:
+    if n % i == 0:
+        print (i, end=" ")
+        count += 1
+    i += 1
+if count == 0:
+    print("Число простое")
 ```
 
 ---
