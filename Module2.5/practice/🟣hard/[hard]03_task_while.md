@@ -17,7 +17,32 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите число n: "))
+
+frendly_num =[]
+summa = 0
+i = 0
+j = 1
+num1 = 1
+num2 = 1
+
+while i < n:
+    while j < i:
+        if i % j == 0:
+            summa += j
+        j +=1
+    frendly_num.append(summa)
+    j = 1
+    summa = 0
+    i += 1
+
+while num1 < len(frendly_num):
+    while num2 < len(frendly_num):
+        if num2 == frendly_num[num1] and num1 == frendly_num[num2] and num2 != frendly_num[num2]:
+            print(num1)
+        num2 += 1
+    num2 = 1
+    num1 += 1
 ```
 
 ---
