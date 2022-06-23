@@ -16,7 +16,19 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите n: "))
+
+i = 1
+perf_num = 0
+
+while i < n:
+    if n % i == 0:
+        perf_num += i
+    i += 1
+if n == perf_num:
+    print("Число совершенное")
+else:
+    print("Число несовершенное")
 ```
 
 ---
