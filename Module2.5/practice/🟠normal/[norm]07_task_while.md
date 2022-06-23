@@ -16,7 +16,26 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+
+i = 1
+perf_num = 0
+count_perf = 0
+
+while a < b: 
+    while i < a:
+        if a % i == 0:
+            perf_num += i
+        i += 1
+    if a == perf_num:
+        count_perf += 1
+        print(a, end=" ")
+    i = 1
+    perf_num = 0
+    a += 1
+print()
+print("Совершенных чисел:", count_perf, "шт.")
 ```
 
 ---
