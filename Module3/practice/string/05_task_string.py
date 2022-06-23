@@ -4,5 +4,14 @@
 
 # Пример строки перевертыша: "И темен город. Мороз узором дорог не мети."
 
-# TODO: your code here
+flip_text = "И те,мен город. Мороз узором дорог не мети."
 
+no_spaces = flip_text.replace(" ", "")
+no_dots = no_spaces.replace(".", "")
+no_commas = no_dots.replace(",", "")
+no_capitals = no_commas.lower()
+
+if no_capitals == no_capitals[::-1]:
+    print("Текст является «перевертышем»")
+else:
+    print("Текст не является «перевертышем»")
