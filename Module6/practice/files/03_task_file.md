@@ -27,6 +27,17 @@
 ### Решение задачи
 
 ```python
+
+with open("sold.txt", "r") as f:
+    prices = []
+    for line in f:
+        sold_str = line.rstrip().split()
+    for price in range(len(sold_str)):
+        prices.append(float(sold_str[price]))
+print("Товаров было продано на сумму:", sum(prices))
+print("Цена самого дорогого товара:", max(prices))
+print("Цена самого дешёвого товара:", min(prices))
+
 # Совет: сначала считайте все цены из файла, сохраните в список,
 # преобразовав каждую цену к числу(цены в файле хранятся в виде строк)
 # А затем, работам с привычным списком, выполните задания
