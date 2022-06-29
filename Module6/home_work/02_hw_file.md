@@ -16,9 +16,15 @@
 ### Решение задачи
 
 ```python
-summa = 0
-with open("data/info.txt", "r") as f:
-    pass
+
+with open("info.txt", "r", encoding="UTF-8") as f:
+    s = 0
+    for line in f:
+        if line.rstrip().isdigit():
+            s += int(line)
+with open("info_sum.txt", "w", encoding="UTF-8") as f:
+    f.write("Сумма цифр: ")
+    f.write(str(s))
 
 print(f"Сумма чисел = {summa}")
 # Уточнение: в сумму добавляем только те значения, которые можно преобразовать к int'у
