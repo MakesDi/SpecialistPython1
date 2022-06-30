@@ -30,6 +30,14 @@ for line in f:
 print(f"Сумма чисел = {sum_numbers}")
 print(f"Среднеарифметическое = {...}")
 ```
+with open("numbers.txt", "r") as f:
+    summa = 0
+    nums = 0
+    for line in f:
+        summa += int(line)
+        nums += 1
+print("Сумма всех чисел: ", summa)
+print("Среднеарифметическое: ", round(summa / nums, 2))
 
 ---
 
