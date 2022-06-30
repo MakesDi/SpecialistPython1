@@ -22,7 +22,13 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+alfabet = list(map(chr, range(ord('А'), ord('Я')+1)))
+for char in range(len(alfabet)):
+    with open("fruits.txt", "r", encoding="UTF-8") as f:
+        for line in f:
+            if alfabet[char] == line[:1]:
+                with open("fruits_" + alfabet[char] +".txt", "a", encoding="UTF-8") as f:
+                    f.write(str(line))
 ```
 
 ---
