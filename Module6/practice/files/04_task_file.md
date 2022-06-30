@@ -22,7 +22,41 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+
+salaries_nospaces = []
+salaries_ammount = []
+surnames = []
+names = []
+middle_names =[]
+i = 4
+j = 5
+k = 6
+
+with open("salaries.txt", "r", encoding="UTF-8") as f:
+    for line in f:
+        for salary in range(len(line.split())):
+            salaries_nospaces.append(line.split()[salary])
+
+for salary in range(len(salaries_nospaces)):
+     if salaries_nospaces[salary].isdigit():
+         salaries_ammount.append(int(salaries_nospaces[salary]))
+
+while i < len(salaries_nospaces):
+     surnames.append(salaries_nospaces[i])
+     i += 4
+
+while j < len(salaries_nospaces):
+     names.append(salaries_nospaces[j][0:1:1] + ".")
+     j += 4
+
+while k < len(salaries_nospaces):
+     middle_names.append(salaries_nospaces[k][0:1:1] + ".")
+     k += 4
+
+with open("highly_paid.txt", "w", encoding="UTF-8") as f:
+    for big_salary in range(len(salaries_ammount)):
+        if salaries_ammount[big_salary] > 60000:
+            f.write(surnames[big_salary] + " " + names[big_salary] + middle_names[big_salary] + "\n")
 ```
 
 ---
